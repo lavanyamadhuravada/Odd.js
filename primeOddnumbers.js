@@ -11,9 +11,9 @@ using oddNumber function.
 function oddNumber(number) {
   const numString = number.toString();
   for (let i = 0; i < numString.length - 1; i++) {
-    const digit1 = parseInt(numString[i]);
-    const digit2 = parseInt(numString[i + 1]);
-    if (Math.abs(digit1 - digit2) !== 1) {
+    const num1 = parseInt(numString[i]);
+    const num2 = parseInt(numString[i + 1]);
+    if (Math.abs(num1 - num2) !== 1) {
       return false;
     }
   }
@@ -45,6 +45,6 @@ function findPrimeODDNumbers(startingNumber, lastNumber) {
 }
 
 const startingNumber = 1;
-const lastNumber = 345456;
+const lastNumber = 10000000;
 
 findPrimeODDNumbers(startingNumber, lastNumber);
