@@ -1,4 +1,14 @@
-function isOneDigitDifference(number) {
+/*
+This is my implementation of the odd number of an input number
+using oddNumber function. 
+*/
+
+/** Function to calculate difference between the two digits, using
+ * oddNumber
+ * @param {Number} inputNumber the input number to odd number of the given value
+ * @returns the  value of odd number with difference 1 as 'inputNumber'
+ */
+function oddNumber(number) {
   const numString = number.toString();
   for (let i = 0; i < numString.length - 1; i++) {
     const digit1 = parseInt(numString[i]);
@@ -9,6 +19,12 @@ function isOneDigitDifference(number) {
   }
   return true;
 }
+/**  Here i implement the function to find the prime numberes for the given value using isPrime
+ * as function name
+*@param {Number} inputNumber the input number to  calculate prime numbers of the given value
+ * @returns the  values of prime numbers
+ */ 
+
 
 function isPrime(number) {
   if (number <= 1) return false;
@@ -20,15 +36,15 @@ function isPrime(number) {
   return true;
 }
 
-function findAndPrintPrimeODDNumbersInRange(startingNumber, lastNumber) {
+function findPrimeODDNumbers(startingNumber, lastNumber) {
   for (let i = startingNumber; i <= lastNumber; i++) {
-    if (isOneDigitDifference(i) && isPrime(i)) {
+    if (oddNumber(i) && isPrime(i)) {
       console.log(i);
     }
   }
 }
 
-const startingNumber = 12;
+const startingNumber = 1;
 const lastNumber = 345456;
 
-findAndPrintPrimeODDNumbersInRange(startingNumber, lastNumber);
+findPrimeODDNumbers(startingNumber, lastNumber);
